@@ -69,33 +69,76 @@ FROM nama_tabel;
 
 ### 2. INSERT
 INSERT merupakan perintah DML yang digunakan untuk menambahkan data pada tabel. Berikut merupakan penulisan syntax pada perintah INSERT:
-- **Menampilkan data dengan kolom dan nilai yang spesifik** 
+- **Menampilkan data dengan kolom dan nilai yang spesifik**
+```sql
+INSERT INTO nama_tabel (kolom-1, kolom-2, …, kolom-n)
+VALUES (nilai-1, nilai-2, …, nilai-n);
+```
 - **Menambahkan data hanya dengan memanggil value tanpa nama memanggil nama kolom**
+```sql
+INSERT INTO nama_tabel
+VALUES (nilai-1, nilai-2, …, nilai-n);
+```
 - **Menambahkan beberapa baris data sekaligus**
+```sql
+INSERT INTO nama_tabel (kolom-1, kolom-2, …, kolom-n)
+VALUES (nilai-1, nilai-2, …, nilai-n), (nilai-1, nilai-2, …, nilai-n);
+```
 
 ### 3. UPDATE
 UPDATE merupakan perintah yang berfungsi untuk mengubah ataupun 
 memperbarui data yang sudah ada di dalam tabel. Berikut merupakan syntax yang digunakan pada perintah UPDATE
 
+```sql
+UPDATE nama_tabel 
+SET kolom-1 = nilai-1, kolom-2 = nilai-2, kolom-n = nilai-n 
+WHERE kondisi;
+```
+
 ### 4. DELETE
 DELETE seperti namanya merupakan sebuah perintah yang berfungsi untuk 
 menghapus data yang ada di dalam tabel. Berikut merupakan syntax yang digunakan untuk melakukan perintah DELETE
+
+```sql
+DELETE FROM nama_tabel 
+WHERE kondisi;
+```
 
 ## C. OPERATOR LOGIKA
 ### 1. AND
 Operator AND digunakan untuk mengembalikan record data apabila kedua 
 kondisi yang diberikan bernilai benar atau true. Berikut merupakan syntax yang digunakan untuk menggunakan operator AND
 
+```sql
+SELECT * FROM nama_tabel 
+WHERE kondisi-1 AND kondisi-2 AND kondisi-n;
+```
+
 ### 2. IN 
 Operator IN digunakan untuk menggantikan kondisi OR yang berulang dalam SELECT, INSERT, UPDATE, atau DELETE. Kita juga dapat menggunakan NOT IN untuk meminimalkan list pada rows data yang kita gunakan. Berikut merupakan syntax yang digunakan untuk menggunakan operator IN
+
+```sql
+SELECT * FROM nama_tabel 
+WHERE nama_kolom IN (nilai-1, nilai-2, …, nilai-3);
+```
 
 ### 3. OR
 Operator OR digunakan untuk mengembalikan record data apabila salah satu 
 kondisi yang diberikan bernilai benar atau true. Berikut merupakan syntax yang digunakan untuk menggunakan operator OR
 
+```sql
+SELECT * FROM nama_tabel 
+WHERE kondisi-1 OR kondisi-2 OR kondisi-n;
+```
+
 ### 4. NOT 
 Operator NOT digunakan untuk mengembalikan record data apabila kondisi 
 yang diberikan bernilai tidak benar atau not true. Berikut merupakan syntax yang digunakan untuk menggunakan operator NOT
+
+```sql
+SELECT * FROM nama_tabel 
+WHERE NOT kondisi
+```
 
 ### 5. LIKE
 Operator LIKE digunakan bersama dengan syntax WHERE untuk mencari pola yang ditentukan dalam sebuah kolom. Berikut merupakan syntax yang digunakan untuk menggunakan operator LIKE :
@@ -105,6 +148,7 @@ Operator LIKE digunakan bersama dengan syntax WHERE untuk mencari pola yang dite
 ## D. OPERASI HIMPUNAN
 ### 1. UNION (∪)
 UNION merupakan operator yang mengembalikan nilai dari dua tabel atau lebih dengan menggabungkan perintah SELECT **tanpa mengembalikan nilai duplikat.** Ada beberapa aturan untuk menggunakan UNION yaitu kolom pada tabel yang digabungkan harus memiliki jumlah dan tipe data yang sama selain itu urutan kolom pada tabel yang digabungkan juga harus sama. Berikut merupakan syntax dari operator UNION : 
+
 ```sql
 SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel
@@ -116,6 +160,7 @@ SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel
 WHERE kondisi;
 ```
+
 <p align="center">
 <img src="img_basdat/union.png">
 </p>
