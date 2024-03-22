@@ -65,7 +65,7 @@
     SQL menggunakan command atau perintah yang dapat dikelompokkan menjadi 4, yaitu:
     <br>
     <b><ul><li>DDL (<i>Data Definition Language</i>)</b></li>
-    DDL digunakan untuk mendefinisikan atau mengelola objjek basis data seperti tabael, kolom, index, dan prosedur.
+    DDL digunakan untuk mendefinisikan atau mengelola objek basis data seperti tabael, kolom, index, dan prosedur.
     <br>
     <br>
     <b><li>DML (<i>Data Manipulation Language</i>)</b></li>
