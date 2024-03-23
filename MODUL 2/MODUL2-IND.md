@@ -10,11 +10,14 @@ Dengan menggunakan perintah DML, pengguna dapat memastikan bahwa data yang disim
 SELECT merupakan perintah DML yang digunakan untuk memilih dan 
 menampilkan nilai yang ada pada tabel. 
 Berikut merupakan syntax penulisan untuk perintah SELECT:
-- **Menampilkan seluruh data**
+-**Menampilkan seluruh data**
 
 ```sql
 SELECT * FROM nama_tabel;
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Seelct%20Karyawan.png">
+</p>
 
 - **Menampilkan data pada kolom tertentu**
 
@@ -22,6 +25,10 @@ SELECT * FROM nama_tabel;
 SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel;
 ```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Select%20kolom%20karyawan.png">
+</p>
 
 - **Menampilkan data kondisi tertentu**
 
@@ -31,12 +38,19 @@ FROM nama_tabel
 WHERE kondisi;
 ```
 
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/C%20Select%20Karyawan.png">
+</p>
+
 - **Menampilkan data berdasarkan nilai yang berbeda saja**
 
 ```sql
 SELECT DISTINCT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel;
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/D%20Select%20Karyawan.png">
+</p>
 
 - **Menampilkan data secara terurut**
 
@@ -45,6 +59,10 @@ SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel
 ORDER BY nama_kolom ASC/DESC;
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/E%20Select%20KAryawan.png">
+</p>
+
 <br>
 (ASC: Menampilkan data dari nilai terkecil ke terbesar. DESC: menampilkan data dari nilai terbesar ke terkecil.)
 <br>
@@ -58,12 +76,20 @@ SELECT CONCAT ( kolom-1, kolom-2)
 FROM nama_tabel;
 ```
 
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Concat%20Table%20Karyawan.png">
+</p>
+
 - **Menampilkan kolom dengan nama lain**
 
 ```sql
 SELECT nama_kolom AS nama_alias
 FROM nama_tabel;
 ```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Alias%20Table%20Karyawan.png">
+</p>
 
 - **Menyalin data dari satu tabel ke dalam tabel baru (insert into)**
 
@@ -74,17 +100,25 @@ INSERT merupakan perintah DML yang digunakan untuk menambahkan data pada tabel. 
 INSERT INTO nama_tabel (kolom-1, kolom-2, …, kolom-n)
 VALUES (nilai-1, nilai-2, …, nilai-n);
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Insert%20Table.png">
+</p>
 - **Menambahkan data hanya dengan memanggil value tanpa nama memanggil nama kolom**
 ```sql
 INSERT INTO nama_tabel
 VALUES (nilai-1, nilai-2, …, nilai-n);
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Insert%20Table.png">
+</p>
 - **Menambahkan beberapa baris data sekaligus**
 ```sql
 INSERT INTO nama_tabel (kolom-1, kolom-2, …, kolom-n)
 VALUES (nilai-1, nilai-2, …, nilai-n), (nilai-1, nilai-2, …, nilai-n);
 ```
-
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/C%20Inser%20Table.png">
+</p>
 ### 3. UPDATE
 UPDATE merupakan perintah yang berfungsi untuk mengubah ataupun 
 memperbarui data yang sudah ada di dalam tabel. Berikut merupakan syntax yang digunakan pada perintah UPDATE
@@ -94,7 +128,9 @@ UPDATE nama_tabel
 SET kolom-1 = nilai-1, kolom-2 = nilai-2, kolom-n = nilai-n 
 WHERE kondisi;
 ```
-
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Update%20Table.png">
+</p>
 ### 4. DELETE
 DELETE seperti namanya merupakan sebuah perintah yang berfungsi untuk 
 menghapus data yang ada di dalam tabel. Berikut merupakan syntax yang digunakan untuk melakukan perintah DELETE
@@ -103,7 +139,9 @@ menghapus data yang ada di dalam tabel. Berikut merupakan syntax yang digunakan 
 DELETE FROM nama_tabel 
 WHERE kondisi;
 ```
-
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Delete%20Table.png">
+</p>
 ## C. OPERATOR LOGIKA
 ### 1. AND
 Operator AND digunakan untuk mengembalikan record data apabila kedua 
@@ -113,7 +151,9 @@ kondisi yang diberikan bernilai benar atau true. Berikut merupakan syntax yang d
 SELECT * FROM nama_tabel 
 WHERE kondisi-1 AND kondisi-2 AND kondisi-n;
 ```
-
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/AND.png">
+</p>
 ### 2. IN 
 Operator IN digunakan untuk menggantikan kondisi OR yang berulang dalam SELECT, INSERT, UPDATE, atau DELETE. Kita juga dapat menggunakan NOT IN untuk meminimalkan list pada rows data yang kita gunakan. Berikut merupakan syntax yang digunakan untuk menggunakan operator IN
 
@@ -121,7 +161,9 @@ Operator IN digunakan untuk menggantikan kondisi OR yang berulang dalam SELECT, 
 SELECT * FROM nama_tabel 
 WHERE nama_kolom IN (nilai-1, nilai-2, …, nilai-3);
 ```
-
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/IN%20.png">
+</p>
 ### 3. OR
 Operator OR digunakan untuk mengembalikan record data apabila salah satu 
 kondisi yang diberikan bernilai benar atau true. Berikut merupakan syntax yang digunakan untuk menggunakan operator OR
@@ -130,6 +172,9 @@ kondisi yang diberikan bernilai benar atau true. Berikut merupakan syntax yang d
 SELECT * FROM nama_tabel 
 WHERE kondisi-1 OR kondisi-2 OR kondisi-n;
 ```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/OR.png">
+</p>
 
 ### 4. NOT 
 Operator NOT digunakan untuk mengembalikan record data apabila kondisi 
