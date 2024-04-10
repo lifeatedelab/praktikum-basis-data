@@ -160,12 +160,55 @@ SELECT * FROM table-name
 WHERE condition-1 AND condition-2 AND condition-n;
 ```
 
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/AND.png">
+</p>
 
 ### 2. IN 
+The IN operator is used to replace repeated OR conditions in SELECT, INSERT, UPDATE, or DELETE. We can also use NOT IN to minimize the list in the data rows we use. Here is the syntax used to use the IN operator.
+
+```sql
+SELECT * FROM table_name
+WHERE coulmn_name IN (value-1, value-2, …, value-3);
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/IN%20.png">
+</p>
 
 ### 3. OR
+The OR operator is used to return a data record if one of the given conditions is true. Here is the syntax used to use the OR operator.
+
+```sql
+SELECT * FROM table-name
+WHERE condition-1 OR condition-2 OR condition-n;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/OR.png">
+</p>
+
 ### 4. NOT 
+The NOT operator is used to return a data record if the condition given is not true. Here is the syntax used to use the NOT operator.
+
+```sql
+SELECT * FROM table_name
+WHERE NOT condition
+```
+
 ### 5. LIKE
+The LIKE operator is used together with the WHERE syntax to search for a specified pattern in a column. Here is the syntax used to use the LIKE operator
+
+-** % used for zero or more than one character**
+
+```sql
+SELECT * FROM table_name
+WHERE column_name LIKE '(character)%';
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bbb2ebd5771ed3404323228b5b0b3f2b2297f622/MODUL%202/img_basdat/LIKE.png">
+</p>
 
 ## D. SET OPERATIONS
 ### 1. UNION (∪)
