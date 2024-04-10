@@ -1,15 +1,15 @@
 # **MODUL 2**
 ##### Table of Content
 - ### [*Pengenalan_Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#a-pengenalan-data-manipulation-language)
-- ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=B.%20PERINTAH%20PADA%20DATA%20MANIPULATION%20LANGUAGE)
-- ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=nama_tabel%20%0AWHERE%20kondisi%3B-,C.%20OPERATOR%20LOGIKA,-1.%20AND)
-- ### [**Set Operators**](set-operators)
-- ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=E.%20OPERATOR%20ARITMATIKA)
-- ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=F.%20OPERATOR%20AGREGASI)
+- ### [**Statement DML pada Database MySQL**](statement-dml)
+- ### [**Logical Operators**]()
+- ### [**Set Operators**]()
+- ### [**Arithmetic Operators**]()
+- ### [**Aggregation Operators**]()
 - ### [**Subquery**](subquery)
-- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=H.%20OPERATOR%20PEMBANDING)
-- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=/DESC%3B-,I.%20SQL%20JOIN,-1.%20CROSS%20JOIN)
-- ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=J.%20CARA%20IMPORT%20DATABASE)
+- ### [**Comparison Operators**]()
+- ### [**SQL Join**]()
+- ### [**How to Import Database in PHPMYADMIN**]()
 
 ## A. PENGENALAN DATA MANIPULATION LANGUAGE
 DML merupakan singkatan dari Data Manipulation Language. Ini merupakan subset dari SQL (Structured Query Language) dengan perintah utamanya yaitu SELECT, INSERT, DELETE, dan UPDATE yang digunakan untuk memodifikasi, memasukkan, memperbarui, dan menghapus data dalam basis data relasional. Perintah DML digunakan untuk berinteraksi dengan data yang disimpan dalam tabel basis data.
