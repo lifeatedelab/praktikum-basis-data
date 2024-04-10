@@ -1,4 +1,14 @@
 # **MODUL 2**
+##### Table of Content
+- ### [*Data Manipulation Language* (DML)]
+- ### [**Statement DML pada Database MySQL**]
+- ### [**Logical Operators**]
+- ### [**Arithmetic Operators**]
+- ### [**Aggregation Operators**]
+- ### [**Subquery**]
+- ### [**Comparison Operators**]
+- ### [**SQL Join**]
+- ### [**How to Import Database in PHPMYADMIN**]
 
 ## A. PENGENALAN DATA MANIPULATION LANGUAGE
 DML merupakan singkatan dari Data Manipulation Language. Ini merupakan subset dari SQL (Structured Query Language) dengan perintah utamanya yaitu SELECT, INSERT, DELETE, dan UPDATE yang digunakan untuk memodifikasi, memasukkan, memperbarui, dan menghapus data dalam basis data relasional. Perintah DML digunakan untuk berinteraksi dengan data yang disimpan dalam tabel basis data.
