@@ -1,17 +1,168 @@
 # **MODULE 2**
 
 ## A. INTRODUCTION DATA MANIPULATION LANGUAGE
-
+DML stands for Data Manipulation Language. It is a subset of SQL (Structured Query Language) with its main commands of SELECT, INSERT, DELETE, and UPDATE used to modify, insert, update, and delete data in a relational database. DML commands are used to interact with data stored in database tables.
+DML commands are essential for managing and maintaining the integration of a database. By using DML commands, users can ensure that the data stored in the database is accurate, up-to-date, and relevant to their needs.
 
 ## B. COMMANDS IN DATA MANIPULATION LANGUAGE 
 ### 1. SELECT
+SELECT is a DML command used to select and display values in a table. 
+Here are the syntax for writing the SELECT command:
+
+-**Display all data**
+
+```sql
+SELECT * FROM nama_tabel;
+```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Seelct%20Karyawan.png">
+</p>
+
+-**Display data in a specific column**
+
+```sql
+SELECT column-1, column-2, ..., column-n
+FROM table_name;
+```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Select%20kolom%20karyawan.png">
+</p>
+
+-**Display data on a specific condition**
+
+```sql
+SELECT column-1, column-2, ..., column-n
+FROM table_name
+WHERE condition;
+```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/C%20Select%20Karyawan.png">
+</p>
+
+-**Display data based on different values only**
+
+```sql
+SELECT DISTINCT column-1, column-2, ..., column-n
+FROM table_name;
+```
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/D%20Select%20Karyawan.png">
+</p>
+
+-**Display data in order**
+
+```sql
+SELECT column-1, column-2, ..., column-n
+FROM table_name
+ORDER BY column_name ASC/DESC;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/E%20Select%20KAryawan.png">
+</p>
+
+<br> 
+(ASC: Displays data from the smallest value to the largest. DESC: displays data from the largest value to the smallest.)
+<br>
+<br>
+Besides the syntax above, there are some additional commands that can be added to the SELECT command as follows:
+
+-**Display columns with other names**
+
+```sql
+SELECT column_name AS alias_name
+FROM table_name;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Alias%20Table%20Karyawan.png">
+</p>
+
+-**Combine and display two columns**
+
+```sql
+SELECT CONCAT(column-1, column-2)
+FROM table_name;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Concat%20Table%20Karyawan.png">
+</p>
+
 ### 2. INSERT
+INSERT is a DML command used to add data to a table. Here are the syntax for writing the INSERT command:
+
+-**Add data with specific columns and values**
+
+```sql
+INSERT INTO nama_tabel (column-1, column-2, ..., column-n)
+VALUES (value-1, value-2, ..., value-n);
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Insert%20Table.png">
+</p>
+
+-**Add data by simply calling the value without calling the column name**
+
+```sql
+INSERT INTO table-name
+VALUES (value-1, value-2, ..., value-n);
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Insert%20Table.png">
+</p>
+
+-**Add multiple rows of data at once**
+
+```sql
+INSERT INTO name_table (column-1, column-2, ..., column-n)
+VALUES (value-1, value-2, ..., value-n), (value-1, value-2, ..., value-n);
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/C%20Inser%20Table.png">
+</p>
+
 ### 3. UPDATE
+UPDATE is a command that functions to change or 
+update data that already exists in the table. The following is the syntax used in the UPDATE command.
+
+```sql
+UPDATE name_table 
+SET column-1 = value-1, column-2 = value-2, column-n = value-n 
+WHERE condition;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Update%20Table.png">
+</p>
+
 ### 4. DELETE
+DELETE as the name suggests is a command that functions to delete data in the table. The following is the syntax used to perform the DELETE command.
+
+```sql
+DELETE FROM name_table 
+WHERE condition;
+```
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Delete%20Table.png">
+</p>
 
 ## C. LOGIC OPERATORS
 ### 1. AND
+The AND operator is used to return a data record if both conditions are true. Here is the syntax used to use the AND operator.
+
+```sql
+SELECT * FROM table-name 
+WHERE condition-1 AND condition-2 AND condition-n;
+```
+
+
 ### 2. IN 
+
 ### 3. OR
 ### 4. NOT 
 ### 5. LIKE
@@ -312,19 +463,131 @@ FROM mahasiswa AS tb_mahasiswa
 CROSS JOIN mata_kuliah AS tb_mk;
 ```
 
+<p align="center">
+<img src="img_basdat/05Hasil_CrossJoin.png">
+</p>
+
+### 2. RIGHT JOIN
+RIGHT JOIN is a type of join that retrieves all rows from the right table and matching rows from the left table. If there is no match, columns from the left table will contain NULL values.
+
+```sql
+SELECT column-1, column-2, .., column-n
+FROM table-1
+RIGHT JOIN table-2
+ON table-1.column_name = table-2.column_name;
+```
+
+<p align="center">
+<img src="img_basdat/06RIGHT_JOIN.png">
+</p>
+
+Example:
+
+```sql
+SELECT mahasiswa.nim, mahasiswa.nama, nilai_mahasiswa.kode_mata_kuliah, nilai_mahasiswa.nilai
+FROM mahasiswa
+RIGHT JOIN nilai_mahasiswa 
+ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
+```
+
+<p align="center">
+<img src="img_basdat/07Hasil_rightjoin.png">     
+</p>
+
+### 3. LEFT JOIN
+LEFT JOIN retrieves all rows from the left table and matching rows from the right table. If there is no match, columns from the right table will contain NULL values.
+
+```sql
+SELECT column-1, column-2, .., column-n
+FROM table-1
+LEFT JOIN table-2
+ON table-1.column_name = table-2.column_name;
+```
+
+<p align="center">
+      <img src="img_basdat/08LEFT_JOIN.png">
+</p>
+
+Example:
+
+```sql
+SELECT mahasiswa.nim, mahasiswa.nama, nilai_mahasiswa.kode_mata_kuliah, nilai_mahasiswa.nilai
+FROM mahasiswa
+LEFT JOIN nilai_mahasiswa 
+ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
+```
+
+<p align="center">
+      <img src="img_basdat/09Hasil_leftjoin.png">
+</p>
+
+### 4. INNER JOIN
+INNER JOIN retrieves rows from both tables that have matching values based on the provided condition. Rows without a match are ignored.
+
+```sql
+SELECT a.column_name-1, b.column_name-2
+FROM table-1 a
+JOIN table-2 b
+ON a.column_name = b.column_name;
+```
+
+<p align="center">
+      <img src="img_basdat/10INNER_JOIN.png">
+</p>
+
+Alternatively, you can use the WHERE clause as follows:
+
+```sql
+SELECT a.column_name-1, b.column_name-2
+FROM table-1 a, table-2 b
+WHERE a.column_name = b.column_name;
+```
+
+Explanation:
+- a is an alias for table 1
+- b is an alias for table 2
+- ON is used to access keys from each table by connecting both tables with a mention of the same column in each table
+
+Example:
+
+```sql
+SELECT tb_nilai.nim_mahasiswa, tb_matakuliah.nama_mk, tb_nilai.nilai
+FROM nilai_mahasiswa tb_nilai
+JOIN mata_kuliah tb_matakuliah
+ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
+```
+
+<p align="center">
+      <img src="img_basdat/11Hasil_innerjoin.png">
+</p>
+
+## J. HOW TO IMPORT A DATABASE
+### 1. Prepare the database file in .sql format that will be imported.
+### 2. Open phpMyAdmin.
+### 3. Create a new database.
+
+<p align="left">
+      <img src="img_basdat/12Import_step3.png"
+</p>
 
 
+### 4. Select the 'Import' tab and then choose the .sql file to be imported.
 
+<p align="left">
+      <img src="img_basdat/12Import_step4.png"
+</p>
+      
+### 5. Click the 'Import' button located at the bottom of the page.
 
+<p align="left">
+      <img src="img_basdat/13Import_step5.png"
+</p>
+      
+### 6. If a success notification appears, the database import process has been successfully completed.
 
-
-
-
-
-
-
-
-
+<p align="left">
+      <img src="img_basdat/14Import_Step6.png"
+</p>
 
 
 
