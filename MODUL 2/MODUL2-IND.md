@@ -1,6 +1,6 @@
 # **MODUL 2**
 ##### Table of Content
-- ### [*Pengenalan_Data Manipulation Language* (DML)](pengenalan-dml)
+- ### [*Pengenalan_Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#a-pengenalan-data-manipulation-language)
 - ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=B.%20PERINTAH%20PADA%20DATA%20MANIPULATION%20LANGUAGE)
 - ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language:~:text=nama_tabel%20%0AWHERE%20kondisi%3B-,C.%20OPERATOR%20LOGIKA,-1.%20AND)
 - ### [**Set Operators**](set-operators)
