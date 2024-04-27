@@ -413,7 +413,7 @@ SELECT COUNT(nama_kolom) FROM nama_tabel;
 </p>
 
 
-## G. OPERATOR PERBANDING
+## G. OPERATOR PERBANDINGAN
 ### 1. Wildcard
 Wildcard merupakan karakter khusus yang digunakan dalam operasi pencarian atau filtrasi data. Wildcard memungkinkan pengguna untuk mencocokkan pola tertentu dalam nilai data.
 <br>
