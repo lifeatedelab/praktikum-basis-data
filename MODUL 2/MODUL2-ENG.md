@@ -1,7 +1,7 @@
 # **MODULE 2**
 ##### Table of Content
 - ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#how-to-import-a-database)
-- ### [*Introduction Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#a-pengenalan-data-manipulation-language)
+- ### [*Introduction Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#a-introduction-data-manipulation-language)
 - ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#b-commands-in-data-manipulation-language)
 - ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#c-logic-operators)
 - ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#d-set-operations)
