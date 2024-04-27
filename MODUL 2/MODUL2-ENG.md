@@ -1,15 +1,44 @@
 # **MODULE 2**
 ##### Table of Content
+- ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#j-cara-import-database)
 - ### [*Introduction Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#a-pengenalan-data-manipulation-language)
 - ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language)
 - ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#c-operator-logika)
 - ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#d-operasi-himpunan)
 - ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#e-operator-aritmatika)
 - ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#f-operator-agregasi)
-- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#g-subquery)
 - ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#h-operator-pembanding)
 - ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#i-sql-join)
-- ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#j-cara-import-database)
+- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#g-subquery)
+
+
+## HOW TO IMPORT A DATABASE
+### 1. Prepare the database file in .sql format that will be imported.
+### 2. Open phpMyAdmin.
+### 3. Create a new database.
+
+<p align="left">
+      <img src="img_basdat/12Import_step3.png"
+</p>
+
+
+### 4. Select the 'Import' tab and then choose the .sql file to be imported.
+
+<p align="left">
+      <img src="img_basdat/12Import_step4.png"
+</p>
+      
+### 5. Click the 'Import' button located at the bottom of the page.
+
+<p align="left">
+      <img src="img_basdat/13Import_step5.png"
+</p>
+      
+### 6. If a success notification appears, the database import process has been successfully completed.
+
+<p align="left">
+      <img src="img_basdat/14Import_Step6.png"
+</p>
 ## A. INTRODUCTION DATA MANIPULATION LANGUAGE
 DML stands for Data Manipulation Language. It is a subset of SQL (Structured Query Language) with its main commands of SELECT, INSERT, DELETE, and UPDATE used to modify, insert, update, and delete data in a relational database. DML commands are used to interact with data stored in database tables.
 DML commands are essential for managing and maintaining the integration of a database. By using DML commands, users can ensure that the data stored in the database is accurate, up-to-date, and relevant to their needs.
@@ -386,50 +415,7 @@ SELECT COUNT(column_name) FROM table_name;
 <img src="img_basdat/count.png">
 </p>
 
-## G. SUBQUERY
-A subquery, also known as a nested query or subselect, is a form of query embedded within another query using the SELECT, WHERE, or FROM clauses. The purpose of a subquery is to generate data that will be used in the main query to limit or filter the data to be retrieved. Subqueries are used to provide additional conditions or criteria in the data retrieval process. Here are some rules for using subqueries:
-
-
-Subqueries must be enclosed in parentheses.
-- The use of the ORDER BY clause is not allowed in subqueries. The ORDER BY clause can be used in the main SELECT statement.
-- The SELECT clause in a subquery must contain a single column name or expression, except for subqueries using the EXISTS keyword.
-- By default, column names in a subquery refer to the table names in the FROM clause of the main query by qualifying the column names.
-- Subqueries cannot be used as operands in expressions.
-
-```sql
-SELECT column_name
-FROM table_name
-WHERE column_name operator
-      (SELECT column_name
-      FROM table_name
-      WHERE column_name operator);
-```
-Here is an example of using a subquery:
-
-
-The database "data_mahasiswa" consists of three tables: mahasiswa, nilai_mahasiswa, and mata_kuliah.
-<p align="center">
-<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
-      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
-      <img src="img_basdat/03Tabel_MK.png" width = "310">
-</p>
-
-```sql
-SELECT nama
-FROM mahasiswa
-WHERE nim IN
-      (SELECT nim_mahasiswa
-       FROM nilai_mahasiswa
-       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
-```
-
-This query is employed to retrieve the names of students from the "mahasiswa" table who meet specific conditions. The embedded subquery serves the purpose of finding student IDs from the "nilai_mahasiswa" table with grades exceeding 80 and associated with the course code “mk001”. The outcome of this subquery, which comprises the qualifying student IDs, is then used as criteria in the main query. Using the WHERE clause and the IN operator, the main query extracts the names of students whose student IDs match the results of the subquery. Therefore, the final result of this query is a list of student names who fulfill the criteria of having a grade above 80 in the course “mk001”.
-
-<p align="center">
-<img src="img_basdat/04Hasil_Subquery.png" width="100">
-</p>
-
-## H. COMPARISON OPERATORS
+## G. COMPARISON OPERATORS
 ### 1. Wildcard
 Wildcard is a special character used in search or data filtering operations. Wildcards allow users to match specific patterns within data values, providing additional flexibility in query or search conditions.
 <br>
@@ -500,7 +486,7 @@ SELECT column_name FROM table_name ORDER BY column_name
 ASC/DESC;
 ```
 
-## I. SQL JOIN
+## H. SQL JOIN
 ### 1. CROSS JOIN
 CROSS JOIN is a type of join that produces the cross product of two tables. The resulting table from CROSS JOIN will contain all possible combinations of rows from both tables, and each row in the result table will encompass all attributes (columns) from the first and second tables.
 
@@ -614,33 +600,45 @@ ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
       <img src="img_basdat/11Hasil_innerjoin.png">
 </p>
 
-## J. HOW TO IMPORT A DATABASE
-### 1. Prepare the database file in .sql format that will be imported.
-### 2. Open phpMyAdmin.
-### 3. Create a new database.
+## I. SUBQUERY
+A subquery, also known as a nested query or subselect, is a form of query embedded within another query using the SELECT, WHERE, or FROM clauses. The purpose of a subquery is to generate data that will be used in the main query to limit or filter the data to be retrieved. Subqueries are used to provide additional conditions or criteria in the data retrieval process. Here are some rules for using subqueries:
 
-<p align="left">
-      <img src="img_basdat/12Import_step3.png"
+
+Subqueries must be enclosed in parentheses.
+- The use of the ORDER BY clause is not allowed in subqueries. The ORDER BY clause can be used in the main SELECT statement.
+- The SELECT clause in a subquery must contain a single column name or expression, except for subqueries using the EXISTS keyword.
+- By default, column names in a subquery refer to the table names in the FROM clause of the main query by qualifying the column names.
+- Subqueries cannot be used as operands in expressions.
+
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name operator
+      (SELECT column_name
+      FROM table_name
+      WHERE column_name operator);
+```
+Here is an example of using a subquery:
+
+
+The database "data_mahasiswa" consists of three tables: mahasiswa, nilai_mahasiswa, and mata_kuliah.
+<p align="center">
+<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
+      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
+      <img src="img_basdat/03Tabel_MK.png" width = "310">
 </p>
 
+```sql
+SELECT nama
+FROM mahasiswa
+WHERE nim IN
+      (SELECT nim_mahasiswa
+       FROM nilai_mahasiswa
+       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
+```
 
-### 4. Select the 'Import' tab and then choose the .sql file to be imported.
+This query is employed to retrieve the names of students from the "mahasiswa" table who meet specific conditions. The embedded subquery serves the purpose of finding student IDs from the "nilai_mahasiswa" table with grades exceeding 80 and associated with the course code “mk001”. The outcome of this subquery, which comprises the qualifying student IDs, is then used as criteria in the main query. Using the WHERE clause and the IN operator, the main query extracts the names of students whose student IDs match the results of the subquery. Therefore, the final result of this query is a list of student names who fulfill the criteria of having a grade above 80 in the course “mk001”.
 
-<p align="left">
-      <img src="img_basdat/12Import_step4.png"
+<p align="center">
+<img src="img_basdat/04Hasil_Subquery.png" width="100">
 </p>
-      
-### 5. Click the 'Import' button located at the bottom of the page.
-
-<p align="left">
-      <img src="img_basdat/13Import_step5.png"
-</p>
-      
-### 6. If a success notification appears, the database import process has been successfully completed.
-
-<p align="left">
-      <img src="img_basdat/14Import_Step6.png"
-</p>
-
-
-
