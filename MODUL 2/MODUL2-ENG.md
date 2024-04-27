@@ -1,15 +1,15 @@
 # **MODULE 2**
 ##### Table of Content
-- ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#j-cara-import-database)
+- ### [**How to Import Database in PHPMYADMIN**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#how-to-import-a-database)
 - ### [*Introduction Data Manipulation Language* (DML)](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#a-pengenalan-data-manipulation-language)
-- ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#b-perintah-pada-data-manipulation-language)
-- ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#c-operator-logika)
-- ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#d-operasi-himpunan)
-- ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#e-operator-aritmatika)
-- ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#f-operator-agregasi)
-- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#h-operator-pembanding)
-- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#i-sql-join)
-- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#g-subquery)
+- ### [**Statement DML pada Database MySQL**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#b-commands-in-data-manipulation-language)
+- ### [**Logical Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#c-logic-operators)
+- ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#d-set-operations)
+- ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#e-arithmetic-operators)
+- ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#f-aggregate-operators)
+- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#g-comparison-operators)
+- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#h-sql-join)
+- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#i-subquery)
 
 
 ## HOW TO IMPORT A DATABASE
@@ -39,6 +39,7 @@
 <p align="left">
       <img src="img_basdat/14Import_Step6.png"
 </p>
+      
 ## A. INTRODUCTION DATA MANIPULATION LANGUAGE
 DML stands for Data Manipulation Language. It is a subset of SQL (Structured Query Language) with its main commands of SELECT, INSERT, DELETE, and UPDATE used to modify, insert, update, and delete data in a relational database. DML commands are used to interact with data stored in database tables.
 DML commands are essential for managing and maintaining the integration of a database. By using DML commands, users can ensure that the data stored in the database is accurate, up-to-date, and relevant to their needs.
