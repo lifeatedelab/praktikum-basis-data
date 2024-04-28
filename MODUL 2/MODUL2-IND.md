@@ -8,8 +8,8 @@
 - ### [**Operasi Aritmatika**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#e-operator-aritmatika)
 - ### [**Operasi Aggregasi**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#f-operator-agregasi)
 - ### [**Operasi Perbandingan**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#g-operator-perbanding)
-- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#h-sql-join)
 - ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#i-subquery)
+- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-IND.md#h-sql-join)
 
 ## CARA IMPORT DATABASE
 ### 1. Siapkan file database dalam format .sql yang akan diimpor.
@@ -257,6 +257,7 @@ WHERE nama_kolom LIKE '(karakter)%';
 ## D. OPERASI HIMPUNAN
 ### 1. UNION (∪)
 UNION merupakan operator yang mengembalikan nilai dari dua tabel atau lebih dengan menggabungkan perintah SELECT **tanpa mengembalikan nilai duplikat.** Ada beberapa aturan untuk menggunakan UNION yaitu kolom pada tabel yang digabungkan harus memiliki jumlah dan tipe data yang sama selain itu urutan kolom pada tabel yang digabungkan juga harus sama. Berikut merupakan syntax dari operator UNION : 
+- Menampilkan angka yang terdapat pada tabel_1 dan tabel_2 tanpa mengembalikan duplikatnya 
 
 ```sql
 SELECT kolom-1, kolom-2, …, kolom-n
@@ -276,6 +277,9 @@ WHERE kondisi;
 
 
 UNION ALL merupakan operator yang mengembalikan nilai dari dua tabel atau lebih dengan menggabungkan perintah SELECT **dengan mengembalikan nilai duplikatnya.** Perbedaan UNION dan UNION ALL terletak pada pengembalian nilainya jika UNION tidak mengembalikan nilai duplikatnya sedangkan UNION ALL mengembalikan nilai duplikatnya. Berikut merupakan syntax dari UNION ALL : 
+
+- Menampilkan angka pada tabel_1 dan tabel_2 dengan mengembalikan nilai duplikatnya
+
 ```sql
 SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel
@@ -293,6 +297,8 @@ WHERE kondisi;
 
 ### 2. INTERSECT (∩)
 INTERSECT merupakan operator yang mengambil irisan dari dua perintah SELECT. Berikut merupakan syntax dari INTERSECT : 
+- Menampilkan angka pada tabel_1 yang ada juga pada tabel_2
+
 ```sql
 SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel 
@@ -307,6 +313,8 @@ FROM nama_tabel);
 
 ### 3. EXCEPT (-)
 EXCEPT merupakan operator yang hanya mengembalikan data unik atau eksklusif pada tabel pertama tetapi yang tidak ada pada tabel kedua. Yang dimaksud data unik atau eksklusif tersebut yaitu tidak ada yang menyamai datanya pada tabel kedua. Berikut merupakan syntax dari EXCEPT :
+- Menampilkan angka yang ada pada tabel_2 tetapi tidak ada pada tabel_1
+
 ```sql
 SELECT kolom-1, kolom-2, …, kolom-n
 FROM nama_tabel
@@ -321,6 +329,8 @@ FROM nama_tabel);
 ## E. OPERATOR ARITMATIKA
 ### 1. Penjumlahan (+)
 Penjumlahan digunakan untuk menambahkan dua nilai.
+- Menampilkan kolom angka yang nilainya ditambah 5
+
 ```sql
 SELECT kolom1, kolom2, kolom2 + bilangan FROM nama_tabel;
 ```
@@ -330,6 +340,8 @@ SELECT kolom1, kolom2, kolom2 + bilangan FROM nama_tabel;
 
 ### 2. Pengurangan (-)
 Pengurangan digunakan untuk mengurangkan satu nilai dari nilai lainnya.
+- Menampilkan kolom angka yang nilainya dikurangi 5
+
 ```sql
 SELECT kolom1, kolom2, kolom2 - bilangan FROM nama_tabel;
 ```
@@ -339,6 +351,8 @@ SELECT kolom1, kolom2, kolom2 - bilangan FROM nama_tabel;
 
 ### 3. Perkalian (*)
 Perkalian digunakan untuk mengalikan dua nilai.
+- Menampilkan kolom angka yang nilainya dikali 5
+
 ```sql
 SELECT kolom1, kolom2, kolom2 * bilangan FROM nama_tabel;
 ```
@@ -348,6 +362,8 @@ SELECT kolom1, kolom2, kolom2 * bilangan FROM nama_tabel;
 
 ### 4. Pembagian (/)
 Pembagian digunakan untuk membagi satu nilai dengan nilai lainnya.
+- Menampilkan kolom angka yang nilainya dibagi 5
+
 ```sql
 SELECT kolom1, kolom2, kolom2 / bilangan FROM nama_tabel;
 ```
@@ -357,6 +373,8 @@ SELECT kolom1, kolom2, kolom2 / bilangan FROM nama_tabel;
 
 ### 5. Modulus (%)
 Modulus digunakan untuk mendapatkan sisa hasil bagi dari kedua nilai.
+- Menampilkan kolom angka yang nilainya dimodulus atau sisa hasil bagi
+
 ```sql
 SELECT kolom1, kolom2, kolom2 % bilangan FROM nama_tabel;
 ```
@@ -369,6 +387,8 @@ Operator Agregasi atau biasa dikenal fungsi agregat merupakan operator yang digu
 <br> Berikut merupakan contoh dari penggunaan operator agregasi di SQL : 
 ### 1. SUM
 SUM digunakan untuk menghitung total nilai dalam satu kolom.
+- Menampilkan total nilai pada kolom angka dari tabel angka
+
 ```sql
 SELECT SUM(nama_kolom) FROM nama_tabel;
 ```
@@ -378,6 +398,8 @@ SELECT SUM(nama_kolom) FROM nama_tabel;
 
 ### 2. AVG
 AVG digunakan untuk menghitung rata-rata nilai dalam satu kolom.
+- Menampilkan rata-rata nilai pada kolom angka dari tabel angka
+
 ```sql
 SELECT AVG(nama_kolom) FROM nama_tabel;
 ```
@@ -387,6 +409,8 @@ SELECT AVG(nama_kolom) FROM nama_tabel;
 
 ### 3. MIN
 MIN digunakan untuk mencari nilai minimum pada suatu kolom.
+- Menampilkan nilai terkecil pada kolom angka dari tabel angka
+
 ```sql
 SELECT MIN(nama_kolom) FROM nama_tabel;
 ```
@@ -396,6 +420,8 @@ SELECT MIN(nama_kolom) FROM nama_tabel;
 
 ### 4. MAX
 MAX digunakan untuk mencari nilai maksimum pada suatu kolom.
+- Menampilkan nilai terbesar pada kolom angka dari tabel angka
+
 ```sql
 SELECT MAX(nama_kolom) FROM nama_tabel;
 ```
@@ -405,6 +431,8 @@ SELECT MAX(nama_kolom) FROM nama_tabel;
 
 ### 5. COUNT
 COUNT digunakan untuk menghitung jumlah baris yang ada pada tabel.
+- Menampilkan jumlah baris pada kolom angka dari tabel angka
+
 ```sql
 SELECT COUNT(nama_kolom) FROM nama_tabel;
 ```
@@ -480,7 +508,48 @@ ASC/DESC;
 ```
 
 
-## H. SQL JOIN
+
+## H. SUBQUERY
+Subquery, yang juga dikenal sebagai nested query atau subselect, ialah bentuk query yang terdapat dalam query lain yang tertanam klausa SELECT, WHERE, atau FROM. Fungsi dari subquery adalah menghasilkan data yang akan digunakan dalam query utama untuk membatasi atau menyaring data yang akan diambil. Subquery digunakan untuk memberikan kondisi atau kriteria tambahan dalam proses pengambilan data. Berikut beberapa aturan dalam penggunaan subquery:
+- Subquery harus diapit dalam tanda kurung.
+- Penggunaan klausa ORDER BY tidak diperbolehkan dalam subquery. Klausa ORDER BY dapat digunakan dalam pernyataan SELECT utama.
+- Klausa SELECT dalam subquery harus berisi satu nama kolom tunggal atau ekspresi, kecuali untuk subquery menggunakan kata kunci EXISTS.
+- Secara default, nama kolom dalam subquery mengacu pada nama tabel dalam klausa FROM di query utama dengan cara mengkualifikasi nama kolom.
+- Subquery tidak boleh digunakan sebagai operan dalam ekspresi.
+
+```sql
+SELECT nama_kolom
+FROM nama_table
+WHERE nama_kolom operator
+      (SELECT nama_kolom
+      FROM nama_table
+      WHERE nama_kolom operator);
+```
+Berikut merupakan contoh penggunaan Subquery :
+<br> Database data_mahasiswa terdiri atas tiga tabel, yakni mahasiswa, nilai_mahasiswa, dan mata_kuliah.
+<p align="center">
+<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
+      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
+      <img src="img_basdat/03Tabel_MK.png" width = "310">
+</p>
+Subquery yang digunakan:
+
+```sql
+SELECT nama
+FROM mahasiswa
+WHERE nim IN
+      (SELECT nim_mahasiswa
+       FROM nilai_mahasiswa
+       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
+```
+
+Query tersebut digunakan untuk mengambil nama mahasiswa dari tabel "mahasiswa" yang memenuhi kondisi tertentu. Subquery di dalamnya berfungsi untuk mencari NIM mahasiswa dari tabel "nilai_mahasiswa" yang memiliki nilai di atas 80 dan memiliki kode mata kuliah 'mk001'. Hasil dari subquery ini, yaitu NIM mahasiswa yang memenuhi kondisi tersebut, kemudian digunakan sebagai kriteria dalam query utama. Dengan menggunakan klausa WHERE dan operator IN, query utama mengekstrak nama mahasiswa yang memiliki NIM sesuai dengan hasil subquery. Dengan demikian, hasil akhir dari query tersebut adalah daftar nama mahasiswa yang memenuhi syarat nilai di atas 80 pada mata kuliah 'mk001' seperti berikut.
+<p align="center">
+<img src="img_basdat/04Hasil_Subquery.png" width="100">
+</p>
+
+
+## I. SQL JOIN
 ### 1. CROSS JOIN
 CROSS JOIN adalah jenis join yang menghasilkan hasil perkalian silang (cross product) dari dua tabel. Tabel yang dihasilkan dari CROSS JOIN akan berisi semua kombinasi baris dari kedua tabel, dan setiap baris pada tabel hasil akan mencakup semua atribut (kolom) dari tabel pertama dan tabel kedua. 
 ```sql
@@ -580,45 +649,6 @@ ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
 
 <p align="center">
       <img src="img_basdat/11Hasil_innerjoin.png">
-</p>
-
-## I. SUBQUERY
-Subquery, yang juga dikenal sebagai nested query atau subselect, ialah bentuk query yang terdapat dalam query lain yang tertanam klausa SELECT, WHERE, atau FROM. Fungsi dari subquery adalah menghasilkan data yang akan digunakan dalam query utama untuk membatasi atau menyaring data yang akan diambil. Subquery digunakan untuk memberikan kondisi atau kriteria tambahan dalam proses pengambilan data. Berikut beberapa aturan dalam penggunaan subquery:
-- Subquery harus diapit dalam tanda kurung.
-- Penggunaan klausa ORDER BY tidak diperbolehkan dalam subquery. Klausa ORDER BY dapat digunakan dalam pernyataan SELECT utama.
-- Klausa SELECT dalam subquery harus berisi satu nama kolom tunggal atau ekspresi, kecuali untuk subquery menggunakan kata kunci EXISTS.
-- Secara default, nama kolom dalam subquery mengacu pada nama tabel dalam klausa FROM di query utama dengan cara mengkualifikasi nama kolom.
-- Subquery tidak boleh digunakan sebagai operan dalam ekspresi.
-
-```sql
-SELECT nama_kolom
-FROM nama_table
-WHERE nama_kolom operator
-      (SELECT nama_kolom
-      FROM nama_table
-      WHERE nama_kolom operator);
-```
-Berikut merupakan contoh penggunaan Subquery :
-<br> Database data_mahasiswa terdiri atas tiga tabel, yakni mahasiswa, nilai_mahasiswa, dan mata_kuliah.
-<p align="center">
-<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
-      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
-      <img src="img_basdat/03Tabel_MK.png" width = "310">
-</p>
-Subquery yang digunakan:
-
-```sql
-SELECT nama
-FROM mahasiswa
-WHERE nim IN
-      (SELECT nim_mahasiswa
-       FROM nilai_mahasiswa
-       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
-```
-
-Query tersebut digunakan untuk mengambil nama mahasiswa dari tabel "mahasiswa" yang memenuhi kondisi tertentu. Subquery di dalamnya berfungsi untuk mencari NIM mahasiswa dari tabel "nilai_mahasiswa" yang memiliki nilai di atas 80 dan memiliki kode mata kuliah 'mk001'. Hasil dari subquery ini, yaitu NIM mahasiswa yang memenuhi kondisi tersebut, kemudian digunakan sebagai kriteria dalam query utama. Dengan menggunakan klausa WHERE dan operator IN, query utama mengekstrak nama mahasiswa yang memiliki NIM sesuai dengan hasil subquery. Dengan demikian, hasil akhir dari query tersebut adalah daftar nama mahasiswa yang memenuhi syarat nilai di atas 80 pada mata kuliah 'mk001' seperti berikut.
-<p align="center">
-<img src="img_basdat/04Hasil_Subquery.png" width="100">
 </p>
 
 
