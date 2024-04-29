@@ -7,9 +7,9 @@
 - ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#d-set-operations)
 - ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#e-arithmetic-operators)
 - ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#f-aggregate-operators)
-- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#g-comparison-operators)
-- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#h-subquery)
-- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#i-sql-join)
+- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#g-comparison-operators)
+- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#h-subquery)
+- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#i-sql-join)
 
 ## HOW TO IMPORT A DATABASE
 ### 1. Prepare the database file in .sql format that will be imported.
