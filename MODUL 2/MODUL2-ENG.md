@@ -7,10 +7,9 @@
 - ### [**Set Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#d-set-operations)
 - ### [**Arithmetic Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#e-arithmetic-operators)
 - ### [**Aggregation Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#f-aggregate-operators)
-- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#g-comparison-operators)
-- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#h-sql-join)
-- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/blob/main/MODUL%202/MODUL2-ENG.md#i-subquery)
-
+- ### [**Comparison Operators**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#g-comparison-operators)
+- ### [**Subquery**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#h-subquery)
+- ### [**SQL Join**](https://github.com/lifeatedmlab/praktikum-basis-data/edit/main/MODUL%202/MODUL2-ENG.md#i-sql-join)
 
 ## HOW TO IMPORT A DATABASE
 ### 1. Prepare the database file in .sql format that will be imported.
@@ -487,7 +486,50 @@ SELECT column_name FROM table_name ORDER BY column_name
 ASC/DESC;
 ```
 
-## H. SQL JOIN
+## H. SUBQUERY
+A subquery, also known as a nested query or subselect, is a form of query embedded within another query using the SELECT, WHERE, or FROM clauses. The purpose of a subquery is to generate data that will be used in the main query to limit or filter the data to be retrieved. Subqueries are used to provide additional conditions or criteria in the data retrieval process. Here are some rules for using subqueries:
+
+
+Subqueries must be enclosed in parentheses.
+- The use of the ORDER BY clause is not allowed in subqueries. The ORDER BY clause can be used in the main SELECT statement.
+- The SELECT clause in a subquery must contain a single column name or expression, except for subqueries using the EXISTS keyword.
+- By default, column names in a subquery refer to the table names in the FROM clause of the main query by qualifying the column names.
+- Subqueries cannot be used as operands in expressions.
+
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name operator
+      (SELECT column_name
+      FROM table_name
+      WHERE column_name operator);
+```
+Here is an example of using a subquery:
+
+
+The database "data_mahasiswa" consists of three tables: mahasiswa, nilai_mahasiswa, and mata_kuliah.
+<p align="center">
+<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
+      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
+      <img src="img_basdat/03Tabel_MK.png" width = "310">
+</p>
+
+```sql
+SELECT nama
+FROM mahasiswa
+WHERE nim IN
+      (SELECT nim_mahasiswa
+       FROM nilai_mahasiswa
+       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
+```
+
+This query is employed to retrieve the names of students from the "mahasiswa" table who meet specific conditions. The embedded subquery serves the purpose of finding student IDs from the "nilai_mahasiswa" table with grades exceeding 80 and associated with the course code “mk001”. The outcome of this subquery, which comprises the qualifying student IDs, is then used as criteria in the main query. Using the WHERE clause and the IN operator, the main query extracts the names of students whose student IDs match the results of the subquery. Therefore, the final result of this query is a list of student names who fulfill the criteria of having a grade above 80 in the course “mk001”.
+
+<p align="center">
+<img src="img_basdat/04Hasil_Subquery.png" width="100">
+</p>
+
+## I. SQL JOIN
 ### 1. CROSS JOIN
 CROSS JOIN is a type of join that produces the cross product of two tables. The resulting table from CROSS JOIN will contain all possible combinations of rows from both tables, and each row in the result table will encompass all attributes (columns) from the first and second tables.
 
@@ -601,45 +643,3 @@ ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
       <img src="img_basdat/11Hasil_innerjoin.png">
 </p>
 
-## I. SUBQUERY
-A subquery, also known as a nested query or subselect, is a form of query embedded within another query using the SELECT, WHERE, or FROM clauses. The purpose of a subquery is to generate data that will be used in the main query to limit or filter the data to be retrieved. Subqueries are used to provide additional conditions or criteria in the data retrieval process. Here are some rules for using subqueries:
-
-
-Subqueries must be enclosed in parentheses.
-- The use of the ORDER BY clause is not allowed in subqueries. The ORDER BY clause can be used in the main SELECT statement.
-- The SELECT clause in a subquery must contain a single column name or expression, except for subqueries using the EXISTS keyword.
-- By default, column names in a subquery refer to the table names in the FROM clause of the main query by qualifying the column names.
-- Subqueries cannot be used as operands in expressions.
-
-```sql
-SELECT column_name
-FROM table_name
-WHERE column_name operator
-      (SELECT column_name
-      FROM table_name
-      WHERE column_name operator);
-```
-Here is an example of using a subquery:
-
-
-The database "data_mahasiswa" consists of three tables: mahasiswa, nilai_mahasiswa, and mata_kuliah.
-<p align="center">
-<img src="img_basdat/01Tabel_Mahasiswa.png" width="310">
-      <img src="img_basdat/02Tabel_Nilai.png" width ="310">
-      <img src="img_basdat/03Tabel_MK.png" width = "310">
-</p>
-
-```sql
-SELECT nama
-FROM mahasiswa
-WHERE nim IN
-      (SELECT nim_mahasiswa
-       FROM nilai_mahasiswa
-       WHERE nilai > 80 AND kode_mata_kuliah = 'mk001');
-```
-
-This query is employed to retrieve the names of students from the "mahasiswa" table who meet specific conditions. The embedded subquery serves the purpose of finding student IDs from the "nilai_mahasiswa" table with grades exceeding 80 and associated with the course code “mk001”. The outcome of this subquery, which comprises the qualifying student IDs, is then used as criteria in the main query. Using the WHERE clause and the IN operator, the main query extracts the names of students whose student IDs match the results of the subquery. Therefore, the final result of this query is a list of student names who fulfill the criteria of having a grade above 80 in the course “mk001”.
-
-<p align="center">
-<img src="img_basdat/04Hasil_Subquery.png" width="100">
-</p>
