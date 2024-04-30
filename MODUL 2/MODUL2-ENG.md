@@ -253,6 +253,7 @@ WHERE column_name LIKE '(character)%';
 ### 1. UNION (∪)
 UNION is an operator that returns values from two or more tables by combining SELECT statements without returning duplicate values. 
 There are several rules for using UNION, such as the columns in the combined tables must have the same number and data types, and the order of columns in the combined tables must also be the same.
+- Display the numbers contained in table_1 and table_2 without returning duplicates 
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -272,6 +273,7 @@ WHERE condition;
 
 UNION ALL is an operator that returns values from two or more tables by combining SELECT statements while returning its duplicate values. 
 The difference between UNION and UNION ALL lies in the returning of values; UNION doesn't return its duplicate values, whereas UNION ALL does.
+- Display the numbers in table_1 and table_2 by returning their duplicate values
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -291,6 +293,8 @@ WHERE condition;
 
 ### 2. INTERSECT (∩)
 INTERSECT is an operator that takes the intersection of two SELECT statements.
+- Display numbers in table_1 that are also in table_2
+
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -305,6 +309,7 @@ FROM table_name);
 
 ### 3. EXCEPT (-)
 EXCEPT is an operator that only returns unique or exclusive data from the first table but not found in the second table. The term "unique or exclusive data" refers to data that has no equivalent in the second table.
+- Display numbers that exist in table_2 but not in table_1
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -321,6 +326,8 @@ FROM table_name);
 Arithmetic Operators in SQL are used to perform simple arithmetic operations such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).
 ### 1. Addition (+)
 Addition is used to add two values.
+- Displays a column of numbers whose value is incremented by 5
+
 ```sql
 SELECT column1, column2, column2 + number FROM table_name;
 ```
@@ -330,6 +337,8 @@ SELECT column1, column2, column2 + number FROM table_name;
 
 ### 2. Subtraction (-) 
 Subtraction is used to subtract one value from another.
+- Displays a column of numbers whose value is subtracted by 5
+
 ```sql
 SELECT column1, column2, column2 - number FROM name_table;
 ```
@@ -339,6 +348,8 @@ SELECT column1, column2, column2 - number FROM name_table;
 
 ### 3. Multiplication (*)
 Multiplication is used to multiply two values.
+- Displays a column of numbers whose value is multiplied by 5
+
 ```sql
 SELECT column1, column2, column2 * number FROM table_name;
 ```
@@ -349,6 +360,8 @@ SELECT column1, column2, column2 * number FROM table_name;
 
 ### 4. Division (/)
 Division is used to divide one value with another value.
+- Displays a column of numbers whose value is divisible by 5
+
 ```sql
 SELECT column1, column2, column2 / number FROM name_table;
 ```
@@ -358,6 +371,8 @@ SELECT column1, column2, column2 / number FROM name_table;
 
 ### 5. Modulus (%)
 Modulus is used to obtain the remainder of the division operation between two values.
+- Displays a column of numbers whose value is the modulus or remainder of the quotient
+
 ```sql
 SELECT column1, column2, column2 % number FROM table_name;
 ```
@@ -369,6 +384,8 @@ SELECT column1, column2, column2 % number FROM table_name;
 Aggregate operators, commonly known as aggregate functions, are operators used to summarize data within a table. These operators can be used in various DML statements, such as SELECT, GROUP BY, etc.
 ### 1. SUM
 SUM is used to calculate the total value within a column.
+- Display the total value in the number column of the number table
+
 ```sql
 SELECT SUM(column_name) FROM table_name;
 ```
@@ -378,6 +395,8 @@ SELECT SUM(column_name) FROM table_name;
 
 ### 2. AVG
 AVG is used to calculate the average value within a column.
+- Display the average value in the number column of the number table
+
 ```sql
 SELECT AVG(column_name) FROM table_name;
 ```
@@ -388,6 +407,8 @@ SELECT AVG(column_name) FROM table_name;
 
 ### 3. MIN
 MIN is used to find the minimum value in a column.
+- Display the minimum value in the number column of the number table
+
 ```sql
 SELECT MIN(column_name) FROM table_name;
 ```
@@ -398,6 +419,8 @@ SELECT MIN(column_name) FROM table_name;
 
 ### 4. MAX
 MAX is used to find the maximum value in a column.
+- Display the maximum value in the number column of the number table
+
 ```sql
 SELECT MAX(column_name) FROM table_name;
 ```
@@ -408,6 +431,8 @@ SELECT MAX(column_name) FROM table_name;
 
 ### 5. COUNT
 COUNT is used to count the number of rows in a table.
+- Display the number of rows in the number column of the number table
+
 ```sql
 SELECT COUNT(column_name) FROM table_name;
 ```
