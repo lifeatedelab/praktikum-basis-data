@@ -191,7 +191,7 @@ WHERE kondisi;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Update%20Table.png">
 </p>
 
-Syntax tersebut akan mengubah data pada tabel karyawan dengan nama ‘John Doe’ pada tabel usia menjadi 32 dan jabatan menjadi manajer proyek.
+Query tersebut akan mengubah data pada tabel karyawan dengan nama ‘John Doe’ pada tabel usia menjadi 32 dan jabatan menjadi manajer proyek.
 
 ### 4. DELETE
 DELETE seperti namanya merupakan sebuah perintah yang berfungsi untuk 
@@ -206,7 +206,7 @@ WHERE kondisi;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Delete%20Table.png">
 </p>
 
-Syntax ini akan menghapus data karyawan dengan nama ‘John Doe’ di tabel karyawan
+Query ini akan menghapus data karyawan dengan nama ‘John Doe’ di tabel karyawan
 
 ## C. OPERATOR LOGIKA
 ### 1. AND
@@ -222,7 +222,7 @@ WHERE kondisi-1 AND kondisi-2 AND kondisi-n;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/AND.png">
 </p>
 
-Syntax ini akan menampilkan data di tabel karyawan dengan kondisi usia kurang dari 30 dan gaji lebih besar dari 4000.
+Query ini akan menampilkan data di tabel karyawan dengan kondisi usia kurang dari 30 dan gaji lebih besar dari 4000.
 
 
 ### 2. IN 
@@ -237,7 +237,7 @@ WHERE nama_kolom IN (nilai-1, nilai-2, …, nilai-3);
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/IN%20.png">
 </p>
 
-Syntax ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawannya, yaitu ‘John Doe’,  ‘Jane Smith’, ‘Alice Johnson’. 
+Query ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawannya, yaitu ‘John Doe’,  ‘Jane Smith’, ‘Alice Johnson’. 
 
 ### 3. OR
 Operator OR digunakan untuk mengembalikan record data apabila salah satu 
@@ -252,7 +252,7 @@ WHERE kondisi-1 OR kondisi-2 OR kondisi-n;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/OR.png">
 </p>
 
-Syntax ini akan menampilkan data di table karyawan dengan kondisi usia kurang dari 30 atau gaji diatas 4000. Maka memungkinakan akan mengambil data karyawan yang usia kurang dari 30 dan gaji kurang dari 4000, usia yang lebih dari 30 dan gaji lebih besar dari 4000, usia yang kurang dari 30 dan gaji lebih besar dari 4000. Dengan kata lain mengambil data jika salah satu kondisi adalah True.
+Query ini akan menampilkan data di table karyawan dengan kondisi usia kurang dari 30 atau gaji diatas 4000. Maka memungkinakan akan mengambil data karyawan yang usia kurang dari 30 dan gaji kurang dari 4000, usia yang lebih dari 30 dan gaji lebih besar dari 4000, usia yang kurang dari 30 dan gaji lebih besar dari 4000. Dengan kata lain mengambil data jika salah satu kondisi adalah True.
 
 ### 4. NOT 
 Operator NOT digunakan untuk mengembalikan record data apabila kondisi 
@@ -284,7 +284,7 @@ WHERE nama_kolom LIKE '(karakter)%';
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bbb2ebd5771ed3404323228b5b0b3f2b2297f622/MODUL%202/img_basdat/LIKE.png">
 </p>
 
-Syntax ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawan diawali dengan huruf a.
+Query ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawan diawali dengan huruf a.
 
 ## D. OPERASI HIMPUNAN
 ### 1. UNION (∪)
@@ -489,7 +489,7 @@ Wildcard merupakan karakter khusus yang digunakan dalam operasi pencarian atau f
 ```sql
 SELECT * FROM table_name WHERE column_name LIKE 'baju%';
 ```
-Syntax diatas akan menghasilkan baris-baris yang memiliki nilai kolom yang dimulai dengan "baju".
+Query diatas akan menghasilkan baris-baris yang memiliki nilai kolom yang dimulai dengan "baju".
 
 ### 2. BETWEEN
 BETWEEN digunakan untuk mengembalikan nilai dalam suatu range.
