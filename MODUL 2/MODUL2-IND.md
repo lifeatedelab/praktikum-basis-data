@@ -56,7 +56,8 @@ Dengan menggunakan perintah DML, pengguna dapat memastikan bahwa data yang disim
 SELECT merupakan perintah DML yang digunakan untuk memilih dan 
 menampilkan nilai yang ada pada tabel. 
 Berikut merupakan syntax penulisan untuk perintah SELECT:
--**Menampilkan seluruh data**
+
+- **Menampilkan seluruh data**
 
 ```sql
 SELECT * FROM nama_tabel;
