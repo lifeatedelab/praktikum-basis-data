@@ -38,6 +38,14 @@
 <p align="left">
       <img src="img_basdat/14Import_Step6.png"
 </p>
+
+### The following database is used for each example in the module:
+1. Databases is used in DML Commands and Logic Operations material
+- [**Database 1**](https://drive.google.com/file/d/1Z1BBdEBrBwT3dyFmI-hcsJHXeSjO5RC_/view?usp=sharing)
+2. Databases is used in Set Operations, Arithmetic Operations, and Aggregation Operations material
+- [**Database 2**](https://drive.google.com/file/d/1LFwdyB5TMe5wzsV_r3JQHNKJBdtVaUYU/view?usp=drive_link)
+3. Database used in SQL Join and Subquery material
+- [**Database 3**](https://drive.google.com/file/d/1zSe0ynU3dlVgcbSgizODrmFGeTYpfmbx/view?usp=drive_link)
       
 ## A. INTRODUCTION DATA MANIPULATION LANGUAGE
 DML stands for Data Manipulation Language. It is a subset of SQL (Structured Query Language) with its main commands of SELECT, INSERT, DELETE, and UPDATE used to modify, insert, update, and delete data in a relational database. DML commands are used to interact with data stored in database tables.
@@ -48,16 +56,16 @@ DML commands are essential for managing and maintaining the integration of a dat
 SELECT is a DML command used to select and display values in a table. 
 Here are the syntax for writing the SELECT command:
 
--**Display all data**
+- **Display all data**
 
 ```sql
-SELECT * FROM nama_tabel;
+SELECT * FROM table_name;
 ```
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Seelct%20Karyawan.png">
 </p>
 
--**Display data in a specific column**
+- **Display data in a specific column**
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -67,7 +75,7 @@ FROM table_name;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Select%20kolom%20karyawan.png">
 </p>
 
--**Display data on a specific condition**
+- **Display data on a specific condition**
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -78,7 +86,7 @@ WHERE condition;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/C%20Select%20Karyawan.png">
 </p>
 
--**Display data based on different values only**
+- **Display data based on different values only**
 
 ```sql
 SELECT DISTINCT column-1, column-2, ..., column-n
@@ -88,7 +96,7 @@ FROM table_name;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/D%20Select%20Karyawan.png">
 </p>
 
--**Display data in order**
+- **Display data in order**
 
 ```sql
 SELECT column-1, column-2, ..., column-n
@@ -106,7 +114,7 @@ ORDER BY column_name ASC/DESC;
 <br>
 Besides the syntax above, there are some additional commands that can be added to the SELECT command as follows:
 
--**Display columns with other names**
+- **Display columns with other names**
 
 ```sql
 SELECT column_name AS alias_name
@@ -117,7 +125,7 @@ FROM table_name;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Alias%20Table%20Karyawan.png">
 </p>
 
--**Combine and display two columns**
+- **Combine and display two columns**
 
 ```sql
 SELECT CONCAT(column-1, column-2)
@@ -128,10 +136,12 @@ FROM table_name;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Concat%20Table%20Karyawan.png">
 </p>
 
+The query above will display data by combining data in two columns, namely the name column and the position column.
+
 ### 2. INSERT
 INSERT is a DML command used to add data to a table. Here are the syntax for writing the INSERT command:
 
--**Add data with specific columns and values**
+- **Add data with specific columns and values**
 
 ```sql
 INSERT INTO nama_tabel (column-1, column-2, ..., column-n)
@@ -142,7 +152,7 @@ VALUES (value-1, value-2, ..., value-n);
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/A%20Insert%20Table.png">
 </p>
 
--**Add data by simply calling the value without calling the column name**
+- **Add data by simply calling the value without calling the column name**
 
 ```sql
 INSERT INTO table-name
@@ -153,7 +163,7 @@ VALUES (value-1, value-2, ..., value-n);
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/B%20Insert%20Table.png">
 </p>
 
--**Add multiple rows of data at once**
+- **Add multiple rows of data at once**
 
 ```sql
 INSERT INTO name_table (column-1, column-2, ..., column-n)
@@ -178,6 +188,8 @@ WHERE condition;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Update%20Table.png">
 </p>
 
+The query will change the data in the 'karyawan' table with the name 'John Doe' in the age table to 32 and the job title to project manager.
+
 ### 4. DELETE
 DELETE as the name suggests is a command that functions to delete data in the table. The following is the syntax used to perform the DELETE command.
 
@@ -189,6 +201,8 @@ WHERE condition;
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Delete%20Table.png">
 </p>
+
+This syntax will delete the employee data with the name 'John Doe' in the 'karyawan' table
 
 ## C. LOGIC OPERATORS
 ### 1. AND
@@ -203,6 +217,8 @@ WHERE condition-1 AND condition-2 AND condition-n;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/AND.png">
 </p>
 
+This query will display data in the 'karyawan' table with the condition that age is less than 30 and salary is greater than 4000.
+
 ### 2. IN 
 The IN operator is used to replace repeated OR conditions in SELECT, INSERT, UPDATE, or DELETE. We can also use NOT IN to minimize the list in the data rows we use. Here is the syntax used to use the IN operator.
 
@@ -214,6 +230,8 @@ WHERE coulmn_name IN (value-1, value-2, …, value-3);
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/IN%20.png">
 </p>
+
+This query will display the data in the 'laryawan' table with the condition of the employee name, which is 'John Doe', 'Jane Smith', 'Alice Johnson'.
 
 ### 3. OR
 The OR operator is used to return a data record if one of the given conditions is true. Here is the syntax used to use the OR operator.
@@ -227,6 +245,8 @@ WHERE condition-1 OR condition-2 OR condition-n;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/OR.png">
 </p>
 
+This query will display data in the 'karyawan' table with the condition of age less than 30 or salary above 4000. Then it is possible to retrieve employee data whose age is less than 30 and salary is less than 4000, age is more than 30 and salary is greater than 4000, age is less than 30 and salary is greater than 4000. In other words, retrieve data if one of the conditions is True.
+
 ### 4. NOT 
 The NOT operator is used to return a data record if the condition given is not true. Here is the syntax used to use the NOT operator.
 
@@ -235,10 +255,18 @@ SELECT * FROM table_name
 WHERE NOT condition
 ```
 
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/c926d1e12b388937d0e19b7d6f6a16cb2d4c4960/MODUL%202/img_basdat/not%201.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/c926d1e12b388937d0e19b7d6f6a16cb2d4c4960/MODUL%202/img_basdat/not%202.png">
+</p>
+
 ### 5. LIKE
 The LIKE operator is used together with the WHERE syntax to search for a specified pattern in a column. Here is the syntax used to use the LIKE operator
 
--** % used for zero or more than one character**
+- ** % used for zero or more than one character**
 
 ```sql
 SELECT * FROM table_name
@@ -248,6 +276,8 @@ WHERE column_name LIKE '(character)%';
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bbb2ebd5771ed3404323228b5b0b3f2b2297f622/MODUL%202/img_basdat/LIKE.png">
 </p>
+
+This query will display data in the 'karyawan' table with the condition that the employee's name begins with the letter a.
 
 ## D. SET OPERATIONS
 ### 1. UNION (∪)
@@ -273,6 +303,7 @@ WHERE condition;
 
 UNION ALL is an operator that returns values from two or more tables by combining SELECT statements while returning its duplicate values. 
 The difference between UNION and UNION ALL lies in the returning of values; UNION doesn't return its duplicate values, whereas UNION ALL does.
+
 - Display the numbers in table_1 and table_2 by returning their duplicate values
 
 ```sql
@@ -381,7 +412,7 @@ SELECT column1, column2, column2 % number FROM table_name;
 </p>
 
 ## F. AGGREGATE OPERATORS
-Aggregate operators, commonly known as aggregate functions, are operators used to summarize data within a table. These operators can be used in various DML statements, such as SELECT, GROUP BY, etc.
+Aggregate operators, commonly known as aggregate functions, are operators used to summarize data within a table. These operators can be used in various DML statements, such as SELECT, GROUP BY, etc. The following is an example of the use of aggregation operators in SQL:
 ### 1. SUM
 SUM is used to calculate the total value within a column.
 - Display the total value in the number column of the number table
@@ -574,6 +605,8 @@ CROSS JOIN mata_kuliah AS tb_mk;
 <img src="img_basdat/05Hasil_CrossJoin.png">
 </p>
 
+This query will display data obtained from cross-multiplication between the 'mahasiswa' table and the 'matakuliah' table. If you pay attention to the 'matakuliah' table, it only consists of 3 rows, namely the subjects of Algoritma Pemrograman, Basis Data, and Struktur Data. So that each student name in the 'mahasiswa' table will appear 3 times from the cross product with the 'matakuliah' table.
+
 ### 2. RIGHT JOIN
 RIGHT JOIN is a type of join that retrieves all rows from the right table and matching rows from the left table. If there is no match, columns from the left table will contain NULL values.
 
@@ -601,6 +634,8 @@ ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
 <img src="img_basdat/07Hasil_rightjoin.png">     
 </p>
 
+This query will display all data or rows in the student_value table with the nim in the 'nilai_mahasiswa' table the same as the nim in the 'mahasiswa' table. But if there is a nim in the 'nilai_mahasiswa' table that is not in the 'mahasiswa' table then the nim and name columns of the query results will read null.
+
 ### 3. LEFT JOIN
 LEFT JOIN retrieves all rows from the left table and matching rows from the right table. If there is no match, columns from the right table will contain NULL values.
 
@@ -627,6 +662,8 @@ ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
 <p align="center">
       <img src="img_basdat/09Hasil_leftjoin.png">
 </p>
+
+This query will display all data or rows from the 'mahasiswa' table with the same nim in the 'mahasiswa' table as the nim in the 'nilai_mahasiswa' table. However, if there is a nim in the 'mahasiswa' table that is not in the 'nilai_mahasiswa' table then the nim and nama columns of the query result will read null.
 
 ### 4. INNER JOIN
 INNER JOIN retrieves rows from both tables that have matching values based on the provided condition. Rows without a match are ignored.
@@ -668,3 +705,4 @@ ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
       <img src="img_basdat/11Hasil_innerjoin.png">
 </p>
 
+This query will display the data in the 'nilai_mahasiswa' table and the 'matakuliah' table if the course codes in both tables are the same.
