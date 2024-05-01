@@ -263,6 +263,14 @@ SELECT * FROM nama_tabel
 WHERE NOT kondisi
 ```
 
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/c926d1e12b388937d0e19b7d6f6a16cb2d4c4960/MODUL%202/img_basdat/not%201.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/c926d1e12b388937d0e19b7d6f6a16cb2d4c4960/MODUL%202/img_basdat/not%202.png">
+</p>
+
 ### 5. LIKE
 Operator LIKE digunakan bersama dengan syntax WHERE untuk mencari pola yang ditentukan dalam sebuah kolom. Berikut merupakan syntax yang digunakan untuk menggunakan operator LIKE :
 - % Digunakan untuk nol atau lebih dari satu karakter.
