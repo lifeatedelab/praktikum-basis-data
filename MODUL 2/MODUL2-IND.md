@@ -37,6 +37,14 @@
 <p align="left">
       <img src="img_basdat/14Import_Step6.png"
 </p>
+
+### Berikut database yang digunakan setiap contoh yang ada dimodul:
+1. Database yang digunakan pada materi Perintah DML dan Operasi Logika
+- [**Database 1**](https://drive.google.com/file/d/1Z1BBdEBrBwT3dyFmI-hcsJHXeSjO5RC_/view?usp=sharing)
+2. Database yang digunakan pada materi Operasi Himpunan, Operasi Aritmatika, dan Operasi Agregasi
+- [**Database 2**](https://drive.google.com/file/d/1LFwdyB5TMe5wzsV_r3JQHNKJBdtVaUYU/view?usp=drive_link)
+3. Database yang digunakan pada materi SQL Join dan Subquery
+- [**Database 3**](https://drive.google.com/file/d/1zSe0ynU3dlVgcbSgizODrmFGeTYpfmbx/view?usp=drive_link)
   
 ## A. PENGENALAN DATA MANIPULATION LANGUAGE
 DML merupakan singkatan dari Data Manipulation Language. Ini merupakan subset dari SQL (Structured Query Language) dengan perintah utamanya yaitu SELECT, INSERT, DELETE, dan UPDATE yang digunakan untuk memodifikasi, memasukkan, memperbarui, dan menghapus data dalam basis data relasional. Perintah DML digunakan untuk berinteraksi dengan data yang disimpan dalam tabel basis data.
@@ -118,6 +126,8 @@ FROM nama_tabel;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Concat%20Table%20Karyawan.png">
 </p>
 
+Query diatas akan menampilkan data dengan cara menggabungkan data didua kolom, yaitu kolom nama dan kolom jabatan.
+
 - **Menampilkan kolom dengan nama lain**
 
 ```sql
@@ -180,6 +190,8 @@ WHERE kondisi;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Update%20Table.png">
 </p>
 
+Syntax tersebut akan mengubah data pada tabel karyawan dengan nama ‘John Doe’ pada tabel usia menjadi 32 dan jabatan menjadi manajer proyek.
+
 ### 4. DELETE
 DELETE seperti namanya merupakan sebuah perintah yang berfungsi untuk 
 menghapus data yang ada di dalam tabel. Berikut merupakan syntax yang digunakan untuk melakukan perintah DELETE
@@ -192,6 +204,8 @@ WHERE kondisi;
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/Delete%20Table.png">
 </p>
+
+Syntax ini akan menghapus data karyawan dengan nama ‘John Doe’ di tabel karyawan
 
 ## C. OPERATOR LOGIKA
 ### 1. AND
@@ -207,6 +221,9 @@ WHERE kondisi-1 AND kondisi-2 AND kondisi-n;
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/AND.png">
 </p>
 
+Syntax ini akan menampilkan data di tabel karyawan dengan kondisi usia kurang dari 30 dan gaji lebih besar dari 4000.
+
+
 ### 2. IN 
 Operator IN digunakan untuk menggantikan kondisi OR yang berulang dalam SELECT, INSERT, UPDATE, atau DELETE. Kita juga dapat menggunakan NOT IN untuk meminimalkan list pada rows data yang kita gunakan. Berikut merupakan syntax yang digunakan untuk menggunakan operator IN
 
@@ -218,6 +235,8 @@ WHERE nama_kolom IN (nilai-1, nilai-2, …, nilai-3);
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/IN%20.png">
 </p>
+
+Syntax ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawannya, yaitu ‘John Doe’,  ‘Jane Smith’, ‘Alice Johnson’. 
 
 ### 3. OR
 Operator OR digunakan untuk mengembalikan record data apabila salah satu 
@@ -231,6 +250,8 @@ WHERE kondisi-1 OR kondisi-2 OR kondisi-n;
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bb2072b9b962c9e624ee2e3fb0c06392918f0b2d/MODUL%202/img_basdat/OR.png">
 </p>
+
+Syntax ini akan menampilkan data di table karyawan dengan kondisi usia kurang dari 30 atau gaji diatas 4000. Maka memungkinakan akan mengambil data karyawan yang usia kurang dari 30 dan gaji kurang dari 4000, usia yang lebih dari 30 dan gaji lebih besar dari 4000, usia yang kurang dari 30 dan gaji lebih besar dari 4000. Dengan kata lain mengambil data jika salah satu kondisi adalah True.
 
 ### 4. NOT 
 Operator NOT digunakan untuk mengembalikan record data apabila kondisi 
@@ -253,6 +274,8 @@ WHERE nama_kolom LIKE '(karakter)%';
 <p align="center">
 <img src="https://github.com/lifeatedmlab/praktikum-basis-data/blob/bbb2ebd5771ed3404323228b5b0b3f2b2297f622/MODUL%202/img_basdat/LIKE.png">
 </p>
+
+Syntax ini akan menampilkan data di tabel karyawan dengan kondisi nama karyawan diawali dengan huruf a.
 
 ## D. OPERASI HIMPUNAN
 ### 1. UNION (∪)
@@ -565,6 +588,7 @@ CROSS JOIN mata_kuliah AS tb_mk;
 <img src="img_basdat/05Hasil_CrossJoin.png">
 </p>
 
+Query ini akan menampilkan data yang diperoleh dari perkalian silang antara tabel mahasiswa dan tabel mata_kuliah. Jika diperhatikan pada tabel mata_kuliah hanya terdiri dari 3 baris, yaitu matakuliah Algoritma Pemrograman, Basis Data, dan Struktur Data. Sehingga setiap nama mahasiswa yang ada di tabel mahasiswa akan muncul sebanyak 3 kali dari hasil kali silang dengan tabel mata_kuliah.
 
 ### 2. RIGHT JOIN
 RIGHT JOIN merupakan jenis join yang mengambil semua baris dari tabel kanan dan baris yang sesuai dari tabel kiri. Jika tidak ada kecocokan, kolom dari tabel kiri akan berisi nilai NULL.
@@ -590,6 +614,8 @@ ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
 <img src="img_basdat/07Hasil_rightjoin.png">     
 </p>
 
+Query ini akan menampilkan semua data atau baris yang ada di tabel nilai_mahasiswa dengan nim yang ada di tabel nilai_mahasiswa sama dengan nim di tabel mahasiswa. Namun jika ada nim di tabel nilai_mahasiswa yang tidak terdapat di tabel mahasiswa maka kolom nim dan nama dari hasil querynya akan bertuliskan null.
+
 ### 3. LEFT JOIN
 LEFT JOIN mengambil semua baris dari tabel kiri dan baris yang sesuai dari tabel kanan. Jika tidak ada kecocokan, kolom dari tabel kanan akan berisi nilai NULL.
 
@@ -613,6 +639,8 @@ ON mahasiswa.nim = nilai_mahasiswa.nim_mahasiswa;
 <p align="center">
       <img src="img_basdat/09Hasil_leftjoin.png">
 </p>
+
+Query ini akan menampilkan semua data atau baris dari tabel mahasiswa dengan nim yang ada di tabel mahasiswa sama dengan nim di tabel nilai_mahasiswa. Namun, jika ada nim di tabel mahasiswa yang tidak terdapat di tabel nilai_mahasiswa maka kolom nim dan nama dari hasil querynya akan bertuliskan null.
 
 ### 4. INNER JOIN
 INNER JOIN mengambil baris dari kedua tabel yang memiliki nilai yang sesuai berdasarkan kondisi yang diberikan. Baris yang tidak memiliki kecocokan diabaikan.
@@ -651,6 +679,7 @@ ON tb_nilai.kode_mata_kuliah = tb_matakuliah.kode_mk;
       <img src="img_basdat/11Hasil_innerjoin.png">
 </p>
 
+Query ini akan menampilkan data yang ada di tabel nilai_mahasiswa dan tabel mata_kuliah jika kode matakuliah di kedua tabel tersebut sama.
 
 
 
